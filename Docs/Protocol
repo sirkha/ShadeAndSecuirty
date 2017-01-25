@@ -1,0 +1,42 @@
+Physical protocol uses power line voltages to 
+
+Control Device (RPi)
+* Controls voltage on line to either 12, 10, or 8 V
+* On startup signals 8V for 3 seconds, 10V for 1 second and then provides 12V
+* Sends information using voltage
+* Recieves information using current
+
+Remote device (Microcontroller)
+* Controls current draw by adding 50mA
+* Recieves information using voltage
+  * Voltages set using control device startup procedure
+  * This accounts for line voltage drop
+* Sends information using current
+
+Control Device Transmission
+* Voltage drops to 10V for 20ms to clear any remote device transmission requests
+* Voltage drops to 8V signalling begining of transmission
+* 8V signals logic low, 10V signals logic high
+* first bit begins 10ms after first transition to 8V
+* Message is 32 bits -- 8 bit address, 8 bit command, 16-bit argument
+* Message end signaled by transition to 12V
+
+Remote device recieving
+* Power line voltage is monitored
+* First bit recorded 15ms after transition to 8V
+* Follow on bits are recored 10ms after the previous one
+
+Remote Device Transmission
+* MOSFET used to draw additional 50 mA current
+* MOSFET cycled every 5ms until power line voltage drops to 8V
+* MOSFET cycled three times at 10ms intervals after drop is detected
+* MOSFET on is logic high, MOSFET off is logic low
+* First bit is transitioned to 10 ms after third 10ms cycle (40 ms after 8V drop is detected)
+* Message is 32 bits -- 8 bit address, 8 bit message identifier, and 16 bit argument
+
+Control Device Receiving
+* Current draw is sensed
+* Running average is kept
+* short variations (less than 20 ms) from running average are assmed to be signals
+* First bit recorded 15 ms after third 10ms cycle is detected
+* Follow on bits are recorded 10 ms after the previous one
