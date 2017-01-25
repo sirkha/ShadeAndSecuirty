@@ -1,0 +1,246 @@
+EESchema Schematic File Version 2
+LIBS:RemoteMotorDriver-rescue
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:l293
+LIBS:a11xx
+LIBS:vreg
+LIBS:RemoteMotorDriver-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 2
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L L293 U?
+U 1 1 58559DC2
+P 6850 4650
+F 0 "U?" H 6850 4600 60  0000 C CNN
+F 1 "L293" H 6850 4700 60  0000 C CNN
+F 2 "" H 6850 4650 60  0001 C CNN
+F 3 "" H 6850 4650 60  0001 C CNN
+	1    6850 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L ATMEGA328-A IC?
+U 1 1 58559EED
+P 3750 2350
+F 0 "IC?" H 3000 3600 50  0000 L BNN
+F 1 "ATMEGA328-A" H 4150 950 50  0000 L BNN
+F 2 "TQFP32" H 3750 2350 50  0000 C CIN
+F 3 "" H 3750 2350 50  0000 C CNN
+	1    3750 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L ATTINY85-S-RESCUE-RemoteMotorDriver IC?
+U 1 1 58559F2E
+P 3400 4350
+F 0 "IC?" H 2250 4750 50  0000 C CNN
+F 1 "ATTINY85-S" H 4400 3950 50  0000 C CNN
+F 2 "SO8-200" H 4350 4350 50  0000 C CIN
+F 3 "" H 3400 4350 50  0000 C CNN
+	1    3400 4350
+	-1   0    0    -1  
+$EndComp
+$Sheet
+S 3150 5700 850  750 
+U 5855AC54
+F0 "PowerSupplyComms" 60
+F1 "PSComms.sch" 60
+F2 "AC_out" I R 4000 5850 60 
+$EndSheet
+$Comp
+L IRF7324 Q?
+U 1 1 5855AFA8
+P 5700 4650
+F 0 "Q?" H 5950 4725 50  0000 L CNN
+F 1 "IRF7324" H 5950 4650 50  0000 L CNN
+F 2 "Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm" H 5950 4575 50  0001 L CNN
+F 3 "" H 5700 4650 50  0000 L CNN
+	1    5700 4650
+	1    0    0    1   
+$EndComp
+$Comp
+L IRF7324 Q?
+U 2 1 5855AFD1
+P 5700 2000
+F 0 "Q?" H 5950 2075 50  0000 L CNN
+F 1 "IRF7324" H 5950 2000 50  0000 L CNN
+F 2 "Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm" H 5950 1925 50  0001 L CNN
+F 3 "" H 5700 2000 50  0000 L CNN
+	2    5700 2000
+	1    0    0    1   
+$EndComp
+$Comp
+L R R?
+U 1 1 5855B134
+P 5900 5100
+F 0 "R?" V 5980 5100 50  0000 C CNN
+F 1 "R" V 5900 5100 50  0000 C CNN
+F 2 "" V 5830 5100 50  0000 C CNN
+F 3 "" H 5900 5100 50  0000 C CNN
+	1    5900 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L A11xx U?
+U 1 1 5855D28C
+P 7100 5500
+F 0 "U?" H 7100 5450 60  0000 C CNN
+F 1 "A11xx" H 7100 5550 60  0000 C CNN
+F 2 "" H 7100 5500 60  0001 C CNN
+F 3 "" H 7100 5500 60  0001 C CNN
+	1    7100 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L L293 U?
+U 2 1 5855D876
+P 6850 2000
+F 0 "U?" H 6850 1950 60  0000 C CNN
+F 1 "L293" H 6850 2050 60  0000 C CNN
+F 2 "" H 6850 2000 60  0001 C CNN
+F 3 "" H 6850 2000 60  0001 C CNN
+	2    6850 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 5855DC23
+P 5900 2450
+F 0 "R?" V 5980 2450 50  0000 C CNN
+F 1 "R" V 5900 2450 50  0000 C CNN
+F 2 "" V 5830 2450 50  0000 C CNN
+F 3 "" H 5900 2450 50  0000 C CNN
+	1    5900 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 4200 5500 4650
+Wire Wire Line
+	4750 4200 6400 4200
+Wire Wire Line
+	6400 4200 6400 4450
+Connection ~ 5500 4200
+Wire Wire Line
+	4750 4100 6300 4100
+Wire Wire Line
+	6300 4100 6300 4650
+Wire Wire Line
+	6300 4650 6400 4650
+Wire Wire Line
+	6850 5300 5900 5300
+Wire Wire Line
+	5900 5300 5900 5250
+Wire Wire Line
+	5800 4450 5800 4000
+Wire Wire Line
+	5800 4000 6800 4000
+Wire Wire Line
+	4750 1250 5200 1250
+Wire Wire Line
+	5200 1250 5200 4100
+Connection ~ 5200 4100
+Wire Wire Line
+	4750 1350 5100 1350
+Wire Wire Line
+	5100 1350 5100 4200
+Connection ~ 5100 4200
+Wire Wire Line
+	5800 4850 6400 4850
+Wire Wire Line
+	5900 4850 5900 4950
+Connection ~ 5900 4850
+Wire Wire Line
+	6400 5600 5350 5600
+Wire Wire Line
+	5350 5600 5350 4300
+Wire Wire Line
+	5350 4300 4750 4300
+Wire Wire Line
+	4750 1450 5000 1450
+Wire Wire Line
+	5000 1450 5000 4300
+Connection ~ 5000 4300
+Wire Wire Line
+	4750 1550 6300 1550
+Wire Wire Line
+	6300 1550 6300 2000
+Wire Wire Line
+	6300 2000 6400 2000
+Wire Wire Line
+	6800 1350 5800 1350
+Wire Wire Line
+	5800 1350 5800 1800
+Wire Wire Line
+	6400 1800 5500 1800
+Wire Wire Line
+	5500 1650 5500 2000
+Wire Wire Line
+	5500 1650 4750 1650
+Connection ~ 5500 1800
+Wire Wire Line
+	5800 2200 6400 2200
+Wire Wire Line
+	5900 2200 5900 2300
+Connection ~ 5900 2200
+Wire Wire Line
+	5900 2600 5900 2650
+Wire Wire Line
+	5900 2650 6850 2650
+$Comp
+L A11xx U?
+U 1 1 5855E0E7
+P 7100 2850
+F 0 "U?" H 7100 2800 60  0000 C CNN
+F 1 "A11xx" H 7100 2900 60  0000 C CNN
+F 2 "" H 7100 2850 60  0001 C CNN
+F 3 "" H 7100 2850 60  0001 C CNN
+	1    7100 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6400 2950 5300 2950
+Wire Wire Line
+	5300 2950 5300 1750
+Wire Wire Line
+	5300 1750 4750 1750
+$EndSCHEMATC
