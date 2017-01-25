@@ -1,0 +1,296 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:vreg
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 2
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L CONN_01X02 P?
+U 1 1 5883C88D
+P 1050 2500
+F 0 "P?" H 1050 2650 50  0000 C CNN
+F 1 "24Vac_In" V 1150 2500 50  0000 C CNN
+F 2 "" H 1050 2500 50  0000 C CNN
+F 3 "" H 1050 2500 50  0000 C CNN
+	1    1050 2500
+	-1   0    0    -1  
+$EndComp
+$Comp
+L TRANSFO T?
+U 1 1 5883D071
+P 3250 1050
+F 0 "T?" H 3250 1300 50  0000 C CNN
+F 1 "TRANSFO" H 3250 750 50  0000 C CNN
+F 2 "" H 3250 1050 50  0000 C CNN
+F 3 "" H 3250 1050 50  0000 C CNN
+	1    3250 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode_Bridge D?
+U 1 1 5883C802
+P 2900 2850
+F 0 "D?" H 2650 3150 50  0000 C CNN
+F 1 "Diode_Bridge" H 3250 2500 50  0000 C CNN
+F 2 "" H 2900 2850 50  0000 C CNN
+F 3 "" H 2900 2850 50  0000 C CNN
+	1    2900 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L D D?
+U 1 1 5883D76A
+P 4000 1100
+F 0 "D?" H 4000 1200 50  0000 C CNN
+F 1 "D" H 4000 1000 50  0000 C CNN
+F 2 "" H 4000 1100 50  0000 C CNN
+F 3 "" H 4000 1100 50  0000 C CNN
+	1    4000 1100
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5883D7FE
+P 3850 1250
+F 0 "#PWR?" H 3850 1000 50  0001 C CNN
+F 1 "GND" H 3850 1100 50  0000 C CNN
+F 2 "" H 3850 1250 50  0000 C CNN
+F 3 "" H 3850 1250 50  0000 C CNN
+	1    3850 1250
+	1    0    0    -1  
+$EndComp
+Text HLabel 6700 850  2    60   Input ~ 0
+Rx
+$Comp
+L LM2576 U?
+U 1 1 5883DA7C
+P 4600 2950
+F 0 "U?" H 4250 3200 60  0000 C CNN
+F 1 "LM2576" H 4850 3200 60  0000 C CNN
+F 2 "" H 4600 2950 60  0001 C CNN
+F 3 "" H 4600 2950 60  0001 C CNN
+F 4 "Texas Instruments" H 4600 3300 60  0001 C CNN "Manufacturer"
+	1    4600 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP1 C?
+U 1 1 5883DAC4
+P 3750 3400
+F 0 "C?" H 3775 3500 50  0000 L CNN
+F 1 "100 uF" H 3775 3300 50  0000 L CNN
+F 2 "" H 3750 3400 50  0000 C CNN
+F 3 "" H 3750 3400 50  0000 C CNN
+	1    3750 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5883DBB4
+P 4500 3800
+F 0 "#PWR?" H 4500 3550 50  0001 C CNN
+F 1 "GND" H 4500 3650 50  0000 C CNN
+F 2 "" H 4500 3800 50  0000 C CNN
+F 3 "" H 4500 3800 50  0000 C CNN
+	1    4500 3800
+	1    0    0    -1  
+$EndComp
+Text HLabel 6700 3050 2    60   Input ~ 0
+Vcc
+Wire Wire Line
+	1250 2450 2900 2450
+Wire Wire Line
+	1250 2550 2450 2550
+Wire Wire Line
+	2450 950  2450 1250
+Wire Wire Line
+	2450 1250 2450 2550
+Wire Wire Line
+	2450 2550 2450 3250
+Wire Wire Line
+	2450 1250 2850 1250
+Connection ~ 2450 2550
+Wire Wire Line
+	1250 850  2850 850 
+Wire Wire Line
+	2450 3250 2900 3250
+Wire Wire Line
+	3650 1250 3850 1250
+Wire Wire Line
+	3850 1250 4000 1250
+Connection ~ 3850 1250
+Wire Wire Line
+	4000 950  4000 850 
+Wire Wire Line
+	3650 850  4000 850 
+Wire Wire Line
+	4000 850  5700 850 
+Wire Wire Line
+	5700 850  6700 850 
+Connection ~ 4000 850 
+Wire Wire Line
+	3300 2850 3750 2850
+Wire Wire Line
+	3750 2850 3900 2850
+Wire Wire Line
+	3750 3250 3750 2850
+Connection ~ 3750 2850
+Wire Wire Line
+	2500 2850 2500 3800
+Wire Wire Line
+	2500 3800 3750 3800
+Wire Wire Line
+	3750 3800 4500 3800
+Wire Wire Line
+	4500 3800 4700 3800
+Wire Wire Line
+	4700 3800 5400 3800
+Wire Wire Line
+	5400 3800 6250 3800
+Wire Wire Line
+	6250 3800 6700 3800
+Wire Wire Line
+	4700 3800 4700 3500
+Wire Wire Line
+	4500 3500 4500 3800
+Connection ~ 4500 3800
+Wire Wire Line
+	3750 3550 3750 3800
+Connection ~ 3750 3800
+$Comp
+L CP1 C?
+U 1 1 5883DC5E
+P 6250 3400
+F 0 "C?" H 6275 3500 50  0000 L CNN
+F 1 "1000 uF" H 6275 3300 50  0000 L CNN
+F 2 "" H 6250 3400 50  0000 C CNN
+F 3 "" H 6250 3400 50  0000 C CNN
+	1    6250 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L INDUCTOR L?
+U 1 1 5883DCA6
+P 5800 3050
+F 0 "L?" V 5750 3050 50  0000 C CNN
+F 1 "100 uH" V 5900 3050 50  0000 C CNN
+F 2 "" H 5800 3050 50  0000 C CNN
+F 3 "" H 5800 3050 50  0000 C CNN
+	1    5800 3050
+	0    1    1    0   
+$EndComp
+$Comp
+L D_Schottky D?
+U 1 1 5883DCF1
+P 5400 3400
+F 0 "D?" H 5400 3500 50  0000 C CNN
+F 1 "D_Schottky" H 5400 3300 50  0000 C CNN
+F 2 "" H 5400 3400 50  0000 C CNN
+F 3 "" H 5400 3400 50  0000 C CNN
+	1    5400 3400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5400 3800 5400 3550
+Connection ~ 4700 3800
+Wire Wire Line
+	6250 3800 6250 3550
+Connection ~ 5400 3800
+Wire Wire Line
+	6250 2850 6250 3050
+Wire Wire Line
+	6250 3050 6250 3250
+Wire Wire Line
+	6100 3050 6250 3050
+Wire Wire Line
+	6250 3050 6700 3050
+Connection ~ 6250 3050
+Wire Wire Line
+	5400 3250 5400 3050
+Wire Wire Line
+	5300 3050 5400 3050
+Wire Wire Line
+	5400 3050 5500 3050
+Connection ~ 5400 3050
+Wire Wire Line
+	5300 2850 5700 2850
+Wire Wire Line
+	5700 2850 6250 2850
+Text HLabel 6700 3800 2    60   Input ~ 0
+GND
+Connection ~ 6250 3800
+$Comp
+L Q_NMOS_DGS Q?
+U 1 1 5883DF80
+P 5800 1100
+F 0 "Q?" H 6100 1150 50  0000 R CNN
+F 1 "Q_NMOS_DGS" H 6450 1050 50  0000 R CNN
+F 2 "" H 6000 1200 50  0000 C CNN
+F 3 "" H 5800 1100 50  0000 C CNN
+	1    5800 1100
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5700 900  5700 850 
+Connection ~ 5700 850 
+Wire Wire Line
+	5700 1300 5700 2850
+Connection ~ 5700 2850
+Text HLabel 6700 1100 2    60   Input ~ 0
+Tx
+Wire Wire Line
+	6700 1100 6000 1100
+$Comp
+L CONN_01X02 P?
+U 1 1 5883E5C1
+P 1050 900
+F 0 "P?" H 1050 1050 50  0000 C CNN
+F 1 "24Vac_Out" V 1150 900 50  0000 C CNN
+F 2 "" H 1050 900 50  0000 C CNN
+F 3 "" H 1050 900 50  0000 C CNN
+	1    1050 900 
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 950  1250 950 
+Connection ~ 2450 1250
+$EndSCHEMATC
